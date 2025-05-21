@@ -17,7 +17,7 @@
       <TextBlock Text="Cadastro de Nomes"
                  FontSize="28"
                  FontWeight="Bold"
-                 Foreground="Cyan"
+                 Foreground="#2980b9"
                  HorizontalAlignment="Center"
 
                  Margin="0,0,0,20" />
