@@ -17,8 +17,9 @@
       <TextBlock Text="Cadastro de Nomes"
                  FontSize="28"
                  FontWeight="Bold"
-                 Foreground="#2c3e50"
+                 Foreground="Cyan"
                  HorizontalAlignment="Center"
+
                  Margin="0,0,0,20" />
 
       <TextBox Width="300"
