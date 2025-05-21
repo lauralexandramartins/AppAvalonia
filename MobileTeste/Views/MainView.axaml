@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:MobileTeste.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MobileTeste.Views.MainView"
+             x:DataType="vm:MainViewModel">
+
+  <Design.DataContext>
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <Border Background="#f0f4f8" CornerRadius="10" Padding="30">
+    <StackPanel Spacing="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+      <TextBlock Text="Cadastro de Nomes"
+                 FontSize="28"
+                 FontWeight="Bold"
+                 Foreground="#2c3e50"
+                 HorizontalAlignment="Center"
+                 Margin="0,0,0,20" />
+
+      <TextBox Width="300"
+               Watermark="Digite seu nome:"
+               Text="{Binding NomeDigitado, Mode=TwoWay}"
+               FontSize="16"
+               Padding="10"
+               Background="White"
+               BorderBrush="#2980b9"
+               BorderThickness="2"
+               CornerRadius="5" />
+
+      <Button Content="Salvar"
+              Command="{Binding SalvarCommand}"
+              Width="70"
+              Margin="120,10,100,0"
+              Background="#2980b9"
+              Foreground="White"
+              FontWeight="SemiBold"
+              FontSize="16"
+              Padding="10"
+              BorderThickness="0"
+              CornerRadius="5"
+              Cursor="Hand" />
+
+      <TextBlock Text="Nomes Cadastrados"
+                 FontWeight="Bold"
+                 FontSize="18"
+                 Foreground="#34495e"
+                 Margin="0,20,0,10"/>
+<TextBox Width="300"
+         Watermark="Filtrar nomes:"
+         Text="{Binding Filtro, Mode=TwoWay}"
+         FontSize="14"
+         Padding="8"
+         Background="White"
+         BorderBrush="#27ae60"
+         BorderThickness="2"
+         CornerRadius="5"
+         Margin="0,20,0,10"/>
+
+      <ListBox Width="300"
+               Height="300"
+               ItemsSource="{Binding NomesFiltrados}"
+               Background="White"
+               BorderBrush="#bdc3c7"
+               BorderThickness="1"
+               CornerRadius="5"
+               FontSize="16"
+               Padding="10"/>
+
+    </StackPanel>
+  </Border>
+</UserControl>
